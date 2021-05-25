@@ -19,12 +19,12 @@ public class Member {
     @Column(name="member_id")
     private Long id;
 
-    private String Name;
+    private String name;
 
     @Embedded
     private Address address;
 
     @OneToMany(mappedBy = "member")
-    private List<Order> der = new ArrayList<>();
+    private List<Order> orders = new ArrayList<>();
 
 }
